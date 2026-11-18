@@ -16,7 +16,7 @@ public class ArmasService {
     }
 
     public void registrarArma(Armas a){
-        Armas armas = new Armas(a.getNome(),a.getCategoria(),a.getFabricante(),a.getImagem(),a.getDescricao())
+        Armas armas = new Armas(a.getNome(),a.getCategoria(),a.getFabricante(),a.getImagem(),a.getDescricao());
         armasRepository.save(armas);
     }
 }
