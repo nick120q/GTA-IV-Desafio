@@ -26,4 +26,9 @@ public class ArmasController {
     public void deletar(@PathVariable int id){
         armasService.deletarArma(id);
     }
+
+    @PutMapping
+    public void alterar(@PathVariable int id, @RequestBody Armas p){
+        armasService.alterar(id,p);
+    }
 }
