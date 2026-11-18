@@ -2,9 +2,7 @@ package com.seduc2.gtavilegal.controllers;
 
 import com.seduc2.gtavilegal.entities.Armas;
 import com.seduc2.gtavilegal.services.ArmasService;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,5 +20,10 @@ public class ArmasController {
 
     public void criarArma(@RequestBody Armas a){
         armasService.registrarArma(a);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deletar(@PathVariable int id){
+        armasService.deletarArma(id);
     }
 }
