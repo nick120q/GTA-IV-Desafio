@@ -19,4 +19,8 @@ public class ArmasService {
         Armas armas = new Armas(a.getNome(),a.getCategoria(),a.getFabricante(),a.getImagem(),a.getDescricao());
         armasRepository.save(armas);
     }
+
+    public void deletarArma(int id){
+        armasRepository.deleteById(id);
+    }
 }
