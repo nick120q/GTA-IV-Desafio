@@ -24,4 +24,8 @@ public class PersonagemController {
         personagemService.registrarPersonagem(p);
     }
 
+    @DeleteMapping("/{id}")
+    public void deletar(@PathVariable int id){
+        personagemService.deletarPersonagem(id);
+    }
 }
