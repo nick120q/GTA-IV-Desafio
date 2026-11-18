@@ -20,4 +20,8 @@ public class PersonagemService {
         Personagem personagem = new Personagem(p.getNome(),p.getApelido(),p.getCategoria(),p.getImagem(),p.getDescricao());
         personagemRepository.save(personagem);
     }
+
+    public void deletarPersonagem(int id){
+        personagemRepository.deleteById(id);
+    }
 }
