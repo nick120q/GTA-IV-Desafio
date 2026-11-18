@@ -2,6 +2,7 @@ package com.seduc2.gtavilegal.services;
 
 import com.seduc2.gtavilegal.entities.Armas;
 import com.seduc2.gtavilegal.repositories.ArmasRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -24,5 +25,15 @@ public class ArmasService {
 
     public void deletarArma(int id){
         armasRepository.deleteById(id);
+    }
+
+    @Transactional
+    public void alterar(int id, Armas a){
+        Armas armas = armasRepository.getReferenceById(id);
+        armas.setNome(a.getNome());
+        armas.setCategoria(a.getCategoria());
+        armas.setDescricao(a.getDescricao());
+        armas.setFabricante(a.getFabricante());
+        armas.setImagem(a.getImagem());
     }
 }
