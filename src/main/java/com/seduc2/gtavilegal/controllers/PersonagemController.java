@@ -28,4 +28,9 @@ public class PersonagemController {
     public void deletar(@PathVariable int id){
         personagemService.deletarPersonagem(id);
     }
+
+    @PutMapping
+    public void alterar(@PathVariable int id,@RequestBody Personagem p){
+        personagemService.alterar(id,p);
+    }
 }
