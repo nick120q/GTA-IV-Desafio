@@ -1,4 +1,7 @@
 package com.seduc2.gtavilegal.repositories;
 
-public interface PersonagemRepository {
+import com.seduc2.gtavilegal.entities.Personagem;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PersonagemRepository extends JpaRepository<Personagem, Integer> {
 }
