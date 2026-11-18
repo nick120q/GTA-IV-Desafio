@@ -20,7 +20,7 @@ public class MissoesService {
     }
 
     public void registrarMissoes(Missoes m){
-        Missoes missoes = new Personagem(m.getNome(),m.getDificuldade(),m.getLocal(),m.getImagem(),m.getDescricao());
+        Missoes missoes = new Missoes(m.getNome(),m.getDificuldade(),m.getLocal(),m.getImagem(),m.getDescricao());
         missoesRepository.save(missoes);
     }
 
